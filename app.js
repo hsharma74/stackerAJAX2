@@ -39,7 +39,7 @@ var showQuestion = function(question) {
 
 	// set some properties related to asker
 	var asker = result.find('.asker');
-	asker.html('<p>Name: <a target="_blank" href=http://stackoverflow.com/users/' + question.owner.user_id + ' >' +
+	asker.html('<p>Name: <a target="_blank" href=https://stackoverflow.com/users/' + question.owner.user_id + ' >' +
 													question.owner.display_name +
 												'</a>' +
 							'</p>' +
@@ -99,7 +99,7 @@ var getUnanswered = function(tags) {
 								sort: 'creation'};
 	
 	var result = $.ajax({
-		url: "http://api.stackexchange.com/2.2/questions/unanswered",
+		url: "https://api.stackexchange.com/2.2/questions/unanswered",
 		data: request,
 		dataType: "jsonp",
 		type: "GET",
@@ -133,7 +133,7 @@ var getInspiration = function(tags) {
 							};
 
 	var result = $.ajax({
-		url: "http://api.stackexchange.com/2.2/tags/" +
+		url: "https://api.stackexchange.com/2.2/tags/" +
 		     request.tag + "/top-answerers/" + request.period + 
 		     "?site=stackoverflow",
 		dataType: 'jsonp',
